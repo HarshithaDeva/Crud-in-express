@@ -1,0 +1,25 @@
+USE node_crud;
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password'
+CREATE TABLE `books` (
+  `id` int(11) NOT NULL,
+  `name` varchar(150) NOT NULL,
+  `author` varchar(150) NOT NULL,
+  `year` varchar(10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+ALTER TABLE `books`
+  ADD PRIMARY KEY (`id`);
+
+ALTER TABLE `books`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
+  
+  insert into `books` values(1,'Malgudi Days','R.K.Narayan','1943');
+  insert into `books` values(2,'Wings of Fire','A.P.J.Abdul Kalam','1999');
+  insert into `books` values(3,'You Can Win','Shiv Khera','1998');
+  insert into `books` values(4,'The White Tiger','Aravind Adiga','2008');
+  insert into `books` values(5,'Skyfire','Aroon Raman','2012');
+  insert into `books` values(6,'The Four Winds','Kristin Hannah','2021');
+  
+select * from books;
+
+alter table `books` modify `name` varchar(150) ;
+alter table `books` modify `author` varchar(150) ;
